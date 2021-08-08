@@ -20,14 +20,13 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+	max-height: 100vh;
 }
 /* ===== Main Container ======= */
 
 .main-container,
 .reload_text_container {
 	max-width: 90vw;
-	min-width: 70vw;
 	background-color: #fff;
 	padding: 2rem 2rem;
 }
