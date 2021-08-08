@@ -26,8 +26,8 @@ body {
 
 .main-container,
 .reload_text_container {
-	max-width: 80vw;
-	min-width: 50vw;
+	max-width: 90vw;
+	min-width: 70vw;
 	background-color: #fff;
 	padding: 2rem 2rem;
 }
