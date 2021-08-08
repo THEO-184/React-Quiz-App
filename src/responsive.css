@@ -1,0 +1,58 @@
+@media screen and (max-width: 900px) {
+	.main-container,
+	.reload_text_container {
+		padding: 1.5rem;
+	}
+
+	.main-container h1,
+	.reload_text_container h1 {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.question_container p {
+		max-width: 60%;
+		font-size: 1rem;
+	}
+
+	.main-container .start_btn,
+	.next_btn,
+	.question_container p,
+	.reload_btn {
+		font-size: 1rem;
+		letter-spacing: 1px;
+	}
+
+	.correct_answers {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.main-container,
+	.reload_text_container {
+		padding: 1rem;
+	}
+
+	.main-container h1,
+	.reload_text_container h1 {
+		font-size: 1.2rem;
+	}
+
+	.spinner {
+		width: 80px;
+		height: 80px;
+	}
+
+	.main-container .start_btn,
+	.next_btn,
+	.question_container p,
+	.reload_btn {
+		font-size: 0.9rem;
+	}
+
+	.correct_answers {
+		font-size: 1rem;
+	}
+}
