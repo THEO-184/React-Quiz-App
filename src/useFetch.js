@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+
+
 export var newQuestions;
 export const useFetch = () => {
 	const [number, setNumber] = useState(10);
@@ -12,16 +14,24 @@ export const useFetch = () => {
 	// get questions
 	const getQuestions = async () => {
 		setLoading(true);
-		const res = await fetch(
-			`https://opentdb.com/api.php?amount=${number}&category=${category}&difficulty=${difficulty}`
-		);
-		const data = await res.json();
-		const questions = data.results;
-		if (questions) {
-			newQuestions = questions;
-			setQuestions(questions);
-			setReady(true);
-			setLoading(false);
+		let data;
+		try {
+			const res = await fetch(
+				`https://opentdb.com/api.php?amount=${number}&category=${category}&difficulty=${difficulty}`
+			);
+			if (res.ok) {
+				data = await res.json();
+			}
+			const questions = data.results;
+			if (questions) {
+				newQuestions = questions;
+				setQuestions(questions);
+				setReady(true);
+				setLoading(false);
+			}
+			throw new Error("Request failed");
+		} catch (error) {
+			console.log(error);
 		}
 	};
 
@@ -38,3 +48,4 @@ export const useFetch = () => {
 		getQuestions,
 	};
 };
+

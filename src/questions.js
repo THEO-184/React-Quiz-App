@@ -9,7 +9,6 @@ function Questions() {
 	const nextQuestion = newQuestions[count];
 
 	if (nextQuestion) {
-		console.log(nextQuestion);
 		var answers = [
 			nextQuestion.correct_answer,
 			...nextQuestion.incorrect_answers,
@@ -18,7 +17,6 @@ function Questions() {
 			.map((value) => ({ value, sort: Math.random() }))
 			.sort((a, b) => a.sort - b.sort)
 			.map(({ value }) => value);
-		console.log(newAnswers);
 	}
 
 	// get answer
